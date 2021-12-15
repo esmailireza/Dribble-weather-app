@@ -1,0 +1,339 @@
+/* font Roboto and Rosario */
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Rosario&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-transform: capitalize;
+  list-style: none;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Noto Sans JP", sans-serif;
+  scroll-behavior: smooth;
+}
+
+li {
+  font-size: 2rem;
+  text-align: center;
+}
+
+body {
+  background-color: #e4e6fe;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main {
+  width: 70%;
+  height: 90vh;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  border-radius: 3rem;
+  border: 3px solid #3a50da;
+  background-color: #eeeffb;
+}
+
+body main .display-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 90%;
+}
+
+body main .display-column .navbar-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  /* background-color: yellow; */
+  width: 100%;
+  margin: 2rem 0;
+}
+
+body main .display-column .navbar-list .list-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main .display-column .navbar-list .list-section .input-list {
+  margin-right: 4rem;
+}
+
+body main .display-column .navbar-list .list-section .input-list input {
+  outline: none;
+  padding: 0.3rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+}
+
+body main .display-column .image {
+  background-image: url("../../images/wallpaperflare.com_wallpaper.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 260px;
+  border-radius: 2rem;
+  -webkit-box-shadow: 3px 3px 30px 20px #e4e6fe;
+          box-shadow: 3px 3px 30px 20px #e4e6fe;
+  position: relative;
+}
+
+body main .display-column .image .sec-left {
+  position: absolute;
+  top: 4rem;
+  left: 2rem;
+}
+
+body main .display-column .image .sec-left .image-sun {
+  position: absolute;
+  width: 5rem;
+  margin-bottom: 5rem;
+}
+
+body main .display-column .image .sec-left h1 {
+  color: white;
+  font-size: 10rem;
+  margin-top: 4.2rem;
+}
+
+body main .display-column .image .sec-left p {
+  color: white;
+  font-size: 4rem;
+}
+
+body main .display-column .image .sec-right {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+}
+
+body main .display-column .image .sec-right h4 {
+  color: white;
+  font-size: 3rem;
+  margin-top: 6rem;
+  text-align: right;
+}
+
+body main .display-column .image .sec-right p {
+  color: white;
+  font-size: 2.5rem;
+}
+
+body main .display-column .bottom-sec {
+  border-radius: 10px;
+  margin-top: 5rem;
+  width: 100%;
+  height: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main .display-column .bottom-sec .left-sec {
+  border-radius: 10px;
+  width: 37%;
+  height: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body main .display-column .bottom-sec .left-sec .left-sec-top {
+  border-radius: 10px;
+  width: 100%;
+  height: 135px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1.5rem 2.5rem;
+  border: 2px solid #ccc;
+  background-color: white;
+}
+
+body main .display-column .bottom-sec .left-sec .left-sec-top .left-sec-top-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body main .display-column .bottom-sec .left-sec .left-sec-top .left-sec-top-top .sec-icon-and-desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main .display-column .bottom-sec .left-sec .left-sec-top .left-sec-top-top .sec-icon-and-desc .icon-desc {
+  margin-left: 1.5rem;
+}
+
+body main .display-column .bottom-sec .left-sec .left-sec-top .left-sec-top-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body main .display-column .bottom-sec .left-sec .left-sec-top .left-sec-top-bottom .sec-icon-and-desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main .display-column .bottom-sec .left-sec .left-sec-top .left-sec-top-bottom .sec-icon-and-desc .icon-desc {
+  margin-left: 1.5rem;
+}
+
+body main .display-column .bottom-sec .left-sec .left-sec-bottom {
+  border-radius: 10px;
+  width: 100%;
+  height: 75px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0rem 2.2rem;
+  -webkit-box-shadow: 3px 3px 30px 20px #e4e6fe;
+          box-shadow: 3px 3px 30px 20px #e4e6fe;
+  background: -webkit-gradient(linear, right top, left top, from(#3a50da), color-stop(75%, #8290e7));
+  background: linear-gradient(to left, #3a50da, #8290e7 75%);
+  color: white;
+}
+
+body main .display-column .bottom-sec .left-sec .left-sec-bottom .left-sec-bottom-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+body main .display-column .bottom-sec .left-sec .left-sec-bottom .left-sec-bottom-1 h2 {
+  font-size: 1.8rem;
+}
+
+body main .display-column .bottom-sec .left-sec .left-sec-bottom .left-sec-bottom-1 p {
+  font-size: 1.6rem;
+}
+
+body main .display-column .bottom-sec .right-sec {
+  border-radius: 10px;
+  border: 2px solid #ccc;
+  width: 58%;
+  height: 250px;
+  background-color: white;
+}
+
+body main .display-column .bottom-sec .right-sec .sec-weather-days {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 100%;
+  height: 12vh;
+}
+
+body main .display-column .bottom-sec .right-sec .sec-weather-days .sec-weather-days-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main .display-column .bottom-sec .right-sec .sec-weather-days .hr {
+  width: 2px;
+  height: 70%;
+  margin-top: 1.5rem;
+  background-color: #ccc;
+}
+/*# sourceMappingURL=styles.css.map */
