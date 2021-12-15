@@ -330,6 +330,11 @@ body main .display-column .bottom-sec .right-sec .sec-weather-days .sec-weather-
           align-items: center;
 }
 
+body main .display-column .bottom-sec .right-sec .sec-weather-days .sec-weather-days-div .filter-color-icon {
+  -webkit-filter: invert(52%) sepia(27%) saturate(3976%) hue-rotate(193deg) brightness(90%) contrast(101%);
+          filter: invert(52%) sepia(27%) saturate(3976%) hue-rotate(193deg) brightness(90%) contrast(101%);
+}
+
 body main .display-column .bottom-sec .right-sec .sec-weather-days .hr {
   width: 2px;
   height: 70%;
