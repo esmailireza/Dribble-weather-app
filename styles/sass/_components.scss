@@ -1,0 +1,27 @@
+// search box
+.input-list {
+  margin-right: 4rem;
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.5rem 0.5rem;
+  border-radius: 0.8rem;
+  input {
+    outline: none;
+    padding: 0.3rem;
+    border-radius: 0.5rem;
+    border: 0;
+    width: 80%;
+  }
+  span {
+    cursor: pointer;
+    color: #a8aabc;
+    font-size: 1.8rem;
+  }
+  .search::before {
+    content: "\f002";
+    font-family: "Font Awesome 5 free";
+    font-weight: 900;
+  }
+}
