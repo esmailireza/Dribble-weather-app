@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/css/styles.css" />
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <title>Dribble Weather App</title>
+  </head>
+  <body>
+    <main>
+      <section class="display-column">
+        <ul class="navbar-list">
+          <li style="color: #3a50da; font-weight: bold">Rayn</li>
+          <div class="list-section">
+            <li class="input-list">
+              <input
+                type="text"
+                name="search"
+                placeholder="Enter city name ..."
+              />
+              <span class="search"></span>
+            </li>
+            <li>
+              <img src="./icons/menu.png" style="width: 3rem" />
+            </li>
+          </div>
+        </ul>
+        <div class="image">
+          <div class="sec-left">
+            <img src="./icons/sun.png" class="image-sun" />
+            <h1>13°</h1>
+            <p>Telluride, CO, USA</p>
+          </div>
+          <div class="sec-right">
+            <h4>7:50 pm</h4>
+            <p>Sunset Time, Monday</p>
+          </div>
+        </div>
+        <div class="bottom-sec">
+          <div class="left-sec">
+            <div class="left-sec-top">
+              <div class="left-sec-top-top">
+                <section class="sec-icon-and-desc">
+                  <img
+                    src="./icons/humidity (2).png"
+                    alt=""
+                    style="width: 30px"
+                  />
+                  <div class="icon-desc">
+                    <h2>humidity</h2>
+                    <p>39%</p>
+                  </div>
+                </section>
+                <section class="sec-icon-and-desc">
+                  <img src="./icons/sunset.png" alt="" style="width: 35px" />
+                  <div class="icon-desc">
+                    <h2>Sunset</h2>
+                    <p>7:50 pm</p>
+                  </div>
+                </section>
+              </div>
+              <div class="left-sec-top-bottom">
+                <section class="sec-icon-and-desc">
+                  <img src="./icons/sun (2).png" alt="" style="width: 30px" />
+                  <div class="icon-desc">
+                    <h2>UV Index</h2>
+                    <p>0 of 10</p>
+                  </div>
+                </section>
+                <section class="sec-icon-and-desc">
+                  <img src="./icons/sunrise.png" alt="" style="width: 35px" />
+                  <div class="icon-desc">
+                    <h2>Sunrise</h2>
+                    <p>6:35 pm</p>
+                  </div>
+                </section>
+              </div>
+            </div>
+            <div class="left-sec-bottom">
+              <section class="left-sec-bottom-1">
+                <h2>Monthly Rainfall</h2>
+                <h2>45mm</h2>
+              </section>
+              <section class="left-sec-bottom-1">
+                <p>This Year</p>
+                <h2 style="color: lightgreen">+17%</h2>
+              </section>
+            </div>
+          </div>
+          <div class="right-sec">
+            <canvas id="myChart" width="400" height="100"></canvas>
+            <section class="sec-weather-days">
+              <div class="sec-weather-days-div">
+                <p>MON</p>
+                <img src="./icons/wind.svg" alt="" class="filter-color-icon" />
+                <h2>13°</h2>
+              </div>
+              <hr class="hr" />
+              <div class="sec-weather-days-div">
+                <p>TUE</p>
+                <img src="./icons/sun.svg" alt="" class="filter-color-icon" />
+                <h2>14°</h2>
+              </div>
+              <hr class="hr" />
+              <div class="sec-weather-days-div">
+                <p>WED</p>
+                <img src="./icons/cloud.svg" alt="" class="filter-color-icon" />
+                <h2>12°</h2>
+              </div>
+              <hr class="hr" />
+              <div class="sec-weather-days-div">
+                <p>THU</p>
+                <img
+                  src="./icons/cloud-snow.svg"
+                  alt=""
+                  class="filter-color-icon"
+                />
+                <h2>-7°</h2>
+              </div>
+              <hr class="hr" />
+              <div class="sec-weather-days-div">
+                <p>FRI</p>
+                <img
+                  src="./icons/cloud-rain.svg"
+                  alt=""
+                  class="filter-color-icon"
+                />
+                <h2>8°</h2>
+              </div>
+              <hr class="hr" />
+              <div class="sec-weather-days-div">
+                <p>SAT</p>
+                <img
+                  src="./icons/cloud-lightning.svg"
+                  alt=""
+                  class="filter-color-icon"
+                />
+                <h2>15°</h2>
+              </div>
+              <hr class="hr" />
+              <div class="sec-weather-days-div">
+                <p>SUN</p>
+                <img src="./icons/cloud.svg" alt="" class="filter-color-icon" />
+                <h2>3°</h2>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="./app.js"></script>
+  </body>
+</html>

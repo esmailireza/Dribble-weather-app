@@ -1,0 +1,185 @@
+body {
+  background-color: $backgroundColor;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  main {
+    width: 70%;
+    height: 90vh;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    border-radius: 3rem;
+    border: 3px solid $blueColor;
+    background-color: #eeeffb;
+    .display-column {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 90%;
+      .navbar-list {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin: 2rem 0;
+
+        .list-section {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+      .image {
+        background-image: url("../../images/wallpaperflare.com_wallpaper.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 260px;
+        border-radius: 2rem;
+        box-shadow: 3px 3px 30px 20px $backgroundColor;
+        position: relative;
+        .sec-left {
+          position: absolute;
+          top: 4rem;
+          left: 2rem;
+          .image-sun {
+            position: absolute;
+            width: 5rem;
+            margin-bottom: 5rem;
+          }
+          h1 {
+            color: white;
+            font-size: 10rem;
+            margin-top: 4.2rem;
+          }
+          p {
+            color: white;
+            font-size: 4rem;
+          }
+        }
+        .sec-right {
+          position: absolute;
+          bottom: 2rem;
+          right: 2rem;
+          h4 {
+            color: white;
+            font-size: 3rem;
+            margin-top: 6rem;
+            text-align: right;
+          }
+          p {
+            color: white;
+            font-size: 2.5rem;
+          }
+        }
+      }
+      .bottom-sec {
+        border-radius: 10px;
+        margin-top: 5rem;
+        width: 100%;
+        height: 250px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .left-sec {
+          border-radius: 10px;
+          width: 37%;
+          height: 250px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          .left-sec-top {
+            border-radius: 10px;
+            width: 100%;
+            height: 135px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 1.5rem 2.5rem;
+            border: 2px solid #ccc;
+            background-color: white;
+            .left-sec-top-top {
+              display: flex;
+              justify-content: space-between;
+              .sec-icon-and-desc {
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                .icon-desc {
+                  margin-left: 1.5rem;
+                }
+              }
+            }
+            .left-sec-top-bottom {
+              display: flex;
+              justify-content: space-between;
+              .sec-icon-and-desc {
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                .icon-desc {
+                  margin-left: 1.5rem;
+                }
+              }
+            }
+          }
+          .left-sec-bottom {
+            border-radius: 10px;
+            width: 100%;
+            height: 75px;
+            display: flex;
+            justify-content: space-between;
+            padding: 0rem 2.2rem;
+            box-shadow: 3px 3px 30px 20px $backgroundColor;
+            background: linear-gradient(to left, #3a50da, #8290e7 75%);
+            color: white;
+            .left-sec-bottom-1 {
+              display: flex;
+              flex-direction: column;
+              justify-content: space-evenly;
+              h2 {
+                font-size: 1.8rem;
+              }
+              p {
+                font-size: 1.6rem;
+              }
+            }
+          }
+        }
+        .right-sec {
+          border-radius: 10px;
+          border: 2px solid #ccc;
+          width: 58%;
+          height: 250px;
+          background-color: white;
+          .sec-weather-days {
+            display: flex;
+            justify-content: space-evenly;
+            width: 100%;
+            height: 12vh;
+            .sec-weather-days-div {
+              display: flex;
+              flex-direction: column;
+              justify-content: space-evenly;
+              align-items: center;
+              .filter-color-icon {
+                filter: invert(52%) sepia(27%) saturate(3976%)
+                  hue-rotate(193deg) brightness(90%) contrast(101%);
+              }
+            }
+            .hr {
+              width: 2px;
+              height: 70%;
+              margin-top: 1.5rem;
+              background-color: #ccc;
+            }
+          }
+        }
+      }
+    }
+  }
+}
