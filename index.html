@@ -25,9 +25,10 @@
           <div class="list-section">
             <li class="input-list">
               <input
-                type="text"
+                type="search"
                 name="search"
                 placeholder="Enter city name ..."
+                onchange="changeHandler()"
               />
               <span class="search"></span>
             </li>
@@ -39,12 +40,13 @@
         <div class="image">
           <div class="sec-left">
             <img src="./icons/sun.png" class="image-sun" />
-            <h1>13°</h1>
-            <p>Telluride, CO, USA</p>
+            <h1></h1>
+            <p></p>
           </div>
           <div class="sec-right">
-            <h4>7:50 pm</h4>
-            <p>Sunset Time, Monday</p>
+            <h4></h4>
+            <span id="descWeather"></span>
+            <span id="dayName"></span>
           </div>
         </div>
         <div class="bottom-sec">
