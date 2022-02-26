@@ -8,7 +8,8 @@ const description = document.querySelector(".sec-right #descWeather");
 const dayName = document.querySelector(".sec-right #dayName");
 const timeShow = document.querySelector(".sec-right h4");
 const imageIcon = document.querySelector(".sec-left img");
-console.log(imageIcon.src);
+const humidity = document.querySelector(".icon-desc p");
+console.log(humidity);
 
 searchBtn.addEventListener("click", searchHandler);
 //console.log(searchBtn);
@@ -136,6 +137,9 @@ inputName.onchange = (e) => {
           "http://openweathermap.org/img/wn/10d@2x.png")
       );
       imageIcon.innerHTML = `<img src = "http://openweathermap.org/img/wn/10d@2x.png" class="image-sun"/>`; */
+      // humidity
+      let getHumi = getApi.main.humidity;
+      humidity.innerHTML = `${getHumi}%`;
     }
     requestApi();
   } catch (error) {
@@ -226,6 +230,9 @@ function reloadPage() {
         setTimeout(getHour, 1000);
       }
       getHour();
+      // humidity
+      let getHumi = getApi.main.humidity;
+      humidity.innerHTML = `${getHumi}%`;
     }
     requestApi();
   } catch (error) {
