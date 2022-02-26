@@ -7,7 +7,8 @@ const searchBtn = document.querySelector(".input-list span");
 const description = document.querySelector(".sec-right #descWeather");
 const dayName = document.querySelector(".sec-right #dayName");
 const timeShow = document.querySelector(".sec-right h4");
-console.log(description);
+const imageIcon = document.querySelector(".sec-left img");
+console.log(imageIcon.src);
 
 searchBtn.addEventListener("click", searchHandler);
 //console.log(searchBtn);
@@ -67,6 +68,10 @@ inputName.onchange = (e) => {
       let getApi = await fetch(
         `https://${myApi.basePoint}weather?q=${myApi.nameValue}&units=metric&appid=${myApi.key}`
       ).then((response) => response.json());
+      // show icon
+      let iconValue = getApi.weather[0].icon;
+      imageIcon.src = `http://openweathermap.org/img/wn/${iconValue}@2x.png`;
+      console.log(getApi.weather[0].icon);
       console.log(getApi);
       //temperature
       let tempValue = Math.round(getApi.main.temp);
@@ -125,6 +130,12 @@ inputName.onchange = (e) => {
         setTimeout(getHour, 1000);
       }
       getHour();
+      // weather icon
+      /* console.log(
+        (imageIcon.src.innerHTML =
+          "http://openweathermap.org/img/wn/10d@2x.png")
+      );
+      imageIcon.innerHTML = `<img src = "http://openweathermap.org/img/wn/10d@2x.png" class="image-sun"/>`; */
     }
     requestApi();
   } catch (error) {
@@ -152,6 +163,11 @@ function reloadPage() {
         `https://${myApi.basePoint}weather?q=${myApi.nameValue}&units=metric&appid=${myApi.key}`
       ).then((response) => response.json());
       console.log(getApi);
+      // show icon
+      let iconValue = getApi.weather[0].icon;
+      imageIcon.src = `http://openweathermap.org/img/wn/${iconValue}@2x.png`;
+      console.log(getApi.weather[0].icon);
+      console.log(getApi);
       //temperature
       let tempValue = Math.round(getApi.main.temp);
       console.log(tempValue);
@@ -161,6 +177,55 @@ function reloadPage() {
       let countryName = getApi.sys.country;
       console.log(countryName);
       locationName.innerHTML = `${cityName}, ${countryName}`;
+      ////////
+      //description weather
+      let desValue = getApi.weather[0].description;
+      console.log();
+      description.innerHTML = desValue;
+      //day name
+      let date = new Date();
+      console.log(date);
+      let day = date.getDay(); //index day
+      let days = [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+      ];
+      console.log(day);
+      let nameOfDay = days[day];
+      console.log(nameOfDay);
+      console.log(dayName);
+      dayName.innerHTML = `, ${nameOfDay}`;
+
+      // clock
+      function getHour() {
+        let date = new Date();
+        let hour = date.getHours();
+        let minutes = date.getMinutes();
+        /* let seconds = date.getSeconds(); */
+        let p = "AM";
+        if (hour > 12) {
+          p = "PM";
+          hour = hour - 12;
+        }
+        if (hour < 10) {
+          hour = "0" + hour;
+        }
+        if (minutes < 10) {
+          minutes = "0" + minutes;
+        }
+        /*  if (seconds < 10) {
+          seconds = "0" + seconds;
+        } */
+        let concat = hour + ":" + minutes + " " + p;
+        timeShow.textContent = concat;
+        setTimeout(getHour, 1000);
+      }
+      getHour();
     }
     requestApi();
   } catch (error) {

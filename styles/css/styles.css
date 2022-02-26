@@ -110,8 +110,7 @@ body main .display-column .image .sec-left {
 
 body main .display-column .image .sec-left .image-sun {
   position: absolute;
-  width: 5rem;
-  margin-bottom: 5rem;
+  margin-top: -3rem;
 }
 
 body main .display-column .image .sec-left h1 {
