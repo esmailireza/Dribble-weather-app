@@ -8,7 +8,9 @@ const description = document.querySelector(".sec-right #descWeather");
 const dayName = document.querySelector(".sec-right #dayName");
 const timeShow = document.querySelector(".sec-right h4");
 const imageIcon = document.querySelector(".sec-left img");
-const humidity = document.querySelector(".icon-desc p");
+const humidity = document.querySelector("#humidity p");
+const sunriseTag = document.querySelector("#sunrise p");
+
 console.log(humidity);
 
 searchBtn.addEventListener("click", searchHandler);
@@ -140,6 +142,26 @@ inputName.onchange = (e) => {
       // humidity
       let getHumi = getApi.main.humidity;
       humidity.innerHTML = `${getHumi}%`;
+      //sunrise time
+      console.log(getApi.sys.sunrise);
+      let unixTimepstamp = getApi.sys.sunrise;
+      let dateNew = new Date(unixTimepstamp * 1000);
+      let hour = dateNew.getHours();
+      let minutes = dateNew.getMinutes();
+      /* let seconds = date.getSeconds(); */
+      let p = "AM";
+      if (hour > 12) {
+        p = "PM";
+        hour = hour - 12;
+      }
+      if (hour < 10) {
+        hour = "0" + hour;
+      }
+      if (minutes < 10) {
+        minutes = "0" + minutes;
+      }
+      let concat = hour + ":" + minutes + " " + p;
+      sunriseTag.textContent = concat;
     }
     requestApi();
   } catch (error) {
@@ -233,6 +255,26 @@ function reloadPage() {
       // humidity
       let getHumi = getApi.main.humidity;
       humidity.innerHTML = `${getHumi}%`;
+      //sunrise time
+      console.log(getApi.sys.sunrise);
+      let unixTimepstamp = getApi.sys.sunrise;
+      let dateNew = new Date(unixTimepstamp * 1000);
+      let hour = dateNew.getHours();
+      let minutes = dateNew.getMinutes();
+      /* let seconds = date.getSeconds(); */
+      let p = "AM";
+      if (hour > 12) {
+        p = "PM";
+        hour = hour - 12;
+      }
+      if (hour < 10) {
+        hour = "0" + hour;
+      }
+      if (minutes < 10) {
+        minutes = "0" + minutes;
+      }
+      let concat = hour + ":" + minutes + " " + p;
+      sunriseTag.textContent = concat;
     }
     requestApi();
   } catch (error) {
