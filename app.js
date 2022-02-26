@@ -10,6 +10,7 @@ const timeShow = document.querySelector(".sec-right h4");
 const imageIcon = document.querySelector(".sec-left img");
 const humidity = document.querySelector("#humidity p");
 const sunriseTag = document.querySelector("#sunrise p");
+const sunsetTag = document.querySelector("#sunset p");
 
 console.log(humidity);
 
@@ -144,10 +145,10 @@ inputName.onchange = (e) => {
       humidity.innerHTML = `${getHumi}%`;
       //sunrise time
       console.log(getApi.sys.sunrise);
-      let unixTimepstamp = getApi.sys.sunrise;
-      let dateNew = new Date(unixTimepstamp * 1000);
-      let hour = dateNew.getHours();
-      let minutes = dateNew.getMinutes();
+      let unixTimepstampSunrise = getApi.sys.sunrise;
+      let dateNewSunrise = new Date(unixTimepstampSunrise * 1000);
+      let hour = dateNewSunrise.getHours();
+      let minutes = dateNewSunrise.getMinutes();
       /* let seconds = date.getSeconds(); */
       let p = "AM";
       if (hour > 12) {
@@ -162,6 +163,27 @@ inputName.onchange = (e) => {
       }
       let concat = hour + ":" + minutes + " " + p;
       sunriseTag.textContent = concat;
+      //sunset time
+
+      console.log(getApi.sys.sunset);
+      let unixTimepstampSunset = getApi.sys.sunset;
+      let dateNewSunset = new Date(unixTimepstampSunset * 1000);
+      hour = dateNewSunset.getHours();
+      minutes = dateNewSunset.getMinutes();
+      /* let seconds = date.getSeconds(); */
+      p = "AM";
+      if (hour > 12) {
+        p = "PM";
+        hour = hour - 12;
+      }
+      if (hour < 10) {
+        hour = "0" + hour;
+      }
+      if (minutes < 10) {
+        minutes = "0" + minutes;
+      }
+      concat = hour + ":" + minutes + " " + p;
+      sunsetTag.textContent = concat;
     }
     requestApi();
   } catch (error) {
@@ -275,6 +297,27 @@ function reloadPage() {
       }
       let concat = hour + ":" + minutes + " " + p;
       sunriseTag.textContent = concat;
+      //sunset time
+
+      console.log(getApi.sys.sunset);
+      let unixTimepstampSunset = getApi.sys.sunset;
+      let dateNewSunset = new Date(unixTimepstampSunset * 1000);
+      hour = dateNewSunset.getHours();
+      minutes = dateNewSunset.getMinutes();
+      /* let seconds = date.getSeconds(); */
+      p = "AM";
+      if (hour > 12) {
+        p = "PM";
+        hour = hour - 12;
+      }
+      if (hour < 10) {
+        hour = "0" + hour;
+      }
+      if (minutes < 10) {
+        minutes = "0" + minutes;
+      }
+      concat = hour + ":" + minutes + " " + p;
+      sunsetTag.textContent = concat;
     }
     requestApi();
   } catch (error) {
