@@ -120,19 +120,33 @@ body main .display-column .image {
 @media screen and (min-width: 320px) and (max-width: 425px) {
   body main .display-column .image {
     height: 160px;
+    -webkit-box-shadow: 3px 3px 15px 5px #e4e6fe;
+            box-shadow: 3px 3px 15px 5px #e4e6fe;
   }
 }
 
 body main .display-column .image .sec-left {
   position: absolute;
   top: 4rem;
-  left: 2rem;
+  left: 4rem;
+}
+
+@media screen and (min-width: 320px) and (max-width: 425px) {
+  body main .display-column .image .sec-left {
+    left: 2rem;
+  }
 }
 
 body main .display-column .image .sec-left .image-sun {
   position: absolute;
-  width: 5rem;
-  margin-bottom: 5rem;
+  margin-top: -3rem;
+}
+
+@media screen and (min-width: 320px) and (max-width: 425px) {
+  body main .display-column .image .sec-left .image-sun {
+    width: 6rem;
+    margin-top: -1rem;
+  }
 }
 
 body main .display-column .image .sec-left h1 {
@@ -161,12 +175,13 @@ body main .display-column .image .sec-left p {
 body main .display-column .image .sec-right {
   position: absolute;
   bottom: 2rem;
-  right: 2rem;
+  right: 4rem;
 }
 
 @media screen and (min-width: 320px) and (max-width: 425px) {
   body main .display-column .image .sec-right {
     bottom: 1.1rem;
+    right: 2rem;
   }
 }
 
@@ -183,24 +198,28 @@ body main .display-column .image .sec-right h4 {
   }
 }
 
-body main .display-column .image .sec-right p {
-  color: white;
+body main .display-column .image .sec-right #descWeather {
   font-size: 2.5rem;
+  color: white;
 }
 
 @media screen and (min-width: 320px) and (max-width: 425px) {
   body main .display-column .image .sec-right #descWeather {
     font-size: 1.3rem;
+    color: white;
   }
 }
 
 body main .display-column .image .sec-right #dayName {
-  display: block;
+  display: unset;
+  font-size: 2.5rem;
+  color: white;
 }
 
 @media screen and (min-width: 320px) and (max-width: 425px) {
   body main .display-column .image .sec-right #dayName {
     display: none;
+    color: white;
   }
 }
 
@@ -294,6 +313,11 @@ body main .display-column .bottom-sec .left-sec .left-sec-top .left-sec-top-top 
   margin-left: 1.5rem;
 }
 
+body main .display-column .bottom-sec .left-sec .left-sec-top .left-sec-top-top .sec-icon-and-desc .icon-desc p {
+  font-size: 1.2rem;
+  margin-top: 0.3rem;
+}
+
 body main .display-column .bottom-sec .left-sec .left-sec-top .left-sec-top-bottom {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -319,6 +343,11 @@ body main .display-column .bottom-sec .left-sec .left-sec-top .left-sec-top-bott
   margin-left: 1.5rem;
 }
 
+body main .display-column .bottom-sec .left-sec .left-sec-top .left-sec-top-bottom .sec-icon-and-desc .icon-desc p {
+  font-size: 1.2rem;
+  margin-top: 0.3rem;
+}
+
 body main .display-column .bottom-sec .left-sec .left-sec-bottom {
   border-radius: 10px;
   width: 100%;
@@ -340,6 +369,8 @@ body main .display-column .bottom-sec .left-sec .left-sec-bottom {
 @media screen and (min-width: 320px) and (max-width: 425px) {
   body main .display-column .bottom-sec .left-sec .left-sec-bottom {
     margin-top: 2rem;
+    -webkit-box-shadow: 3px 3px 15px 5px #e4e6fe;
+            box-shadow: 3px 3px 15px 5px #e4e6fe;
   }
 }
 
@@ -434,7 +465,7 @@ body main .display-column .bottom-sec .right-sec .sec-weather-days .hr {
   border-radius: 0.8rem;
 }
 
-@media screen and (min-width: 320px) and (max-width: 375px) {
+@media screen and (min-width: 320px) and (max-width: 425px) {
   .input-list {
     margin-right: 0;
     width: 90%;
