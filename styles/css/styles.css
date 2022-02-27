@@ -4,7 +4,7 @@
   padding: 0;
   margin: 0;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   text-transform: capitalize;
   list-style: none;
 }
@@ -27,11 +27,11 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 body main {
@@ -42,14 +42,20 @@ body main {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   border-radius: 3rem;
   border: 3px solid #3a50da;
   background-color: #eeeffb;
+}
+
+@media screen and (min-width: 320px) and (max-width: 425px) {
+  body main {
+    width: 85%;
+  }
 }
 
 body main .display-column {
@@ -58,11 +64,11 @@ body main .display-column {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 90%;
 }
 
@@ -71,10 +77,13 @@ body main .display-column .navbar-list {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 100%;
   margin: 2rem 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 body main .display-column .navbar-list .list-section {
@@ -82,11 +91,17 @@ body main .display-column .navbar-list .list-section {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (min-width: 320px) and (max-width: 425px) {
+  body main .display-column .navbar-list .list-section #menu-toggle-size img {
+    display: none;
+  }
 }
 
 body main .display-column .image {
@@ -98,8 +113,14 @@ body main .display-column .image {
   height: 260px;
   border-radius: 2rem;
   -webkit-box-shadow: 3px 3px 30px 20px #e4e6fe;
-  box-shadow: 3px 3px 30px 20px #e4e6fe;
+          box-shadow: 3px 3px 30px 20px #e4e6fe;
   position: relative;
+}
+
+@media screen and (min-width: 320px) and (max-width: 425px) {
+  body main .display-column .image {
+    height: 160px;
+  }
 }
 
 body main .display-column .image .sec-left {
@@ -110,7 +131,8 @@ body main .display-column .image .sec-left {
 
 body main .display-column .image .sec-left .image-sun {
   position: absolute;
-  margin-top: -3rem;
+  width: 5rem;
+  margin-bottom: 5rem;
 }
 
 body main .display-column .image .sec-left h1 {
@@ -119,15 +141,33 @@ body main .display-column .image .sec-left h1 {
   margin-top: 4.2rem;
 }
 
+@media screen and (min-width: 320px) and (max-width: 425px) {
+  body main .display-column .image .sec-left h1 {
+    font-size: 4rem;
+  }
+}
+
 body main .display-column .image .sec-left p {
   color: white;
   font-size: 4rem;
+}
+
+@media screen and (min-width: 320px) and (max-width: 425px) {
+  body main .display-column .image .sec-left p {
+    font-size: 2rem;
+  }
 }
 
 body main .display-column .image .sec-right {
   position: absolute;
   bottom: 2rem;
   right: 2rem;
+}
+
+@media screen and (min-width: 320px) and (max-width: 425px) {
+  body main .display-column .image .sec-right {
+    bottom: 1.1rem;
+  }
 }
 
 body main .display-column .image .sec-right h4 {
@@ -137,10 +177,31 @@ body main .display-column .image .sec-right h4 {
   text-align: right;
 }
 
-body main .display-column .image .sec-right #dayName,
-body main .display-column .image .sec-right #descWeather {
+@media screen and (min-width: 320px) and (max-width: 425px) {
+  body main .display-column .image .sec-right h4 {
+    font-size: 2rem;
+  }
+}
+
+body main .display-column .image .sec-right p {
   color: white;
   font-size: 2.5rem;
+}
+
+@media screen and (min-width: 320px) and (max-width: 425px) {
+  body main .display-column .image .sec-right #descWeather {
+    font-size: 1.3rem;
+  }
+}
+
+body main .display-column .image .sec-right #dayName {
+  display: block;
+}
+
+@media screen and (min-width: 320px) and (max-width: 425px) {
+  body main .display-column .image .sec-right #dayName {
+    display: none;
+  }
 }
 
 body main .display-column .bottom-sec {
@@ -152,11 +213,18 @@ body main .display-column .bottom-sec {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (min-width: 320px) and (max-width: 425px) {
+  body main .display-column .bottom-sec {
+    display: block;
+    margin-top: 2rem;
+  }
 }
 
 body main .display-column .bottom-sec .left-sec {
@@ -168,11 +236,18 @@ body main .display-column .bottom-sec .left-sec {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media screen and (min-width: 320px) and (max-width: 425px) {
+  body main .display-column .bottom-sec .left-sec {
+    width: 100%;
+    display: unset;
+  }
 }
 
 body main .display-column .bottom-sec .left-sec .left-sec-top {
@@ -184,105 +259,63 @@ body main .display-column .bottom-sec .left-sec .left-sec-top {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 1.5rem 2.5rem;
   border: 2px solid #ccc;
   background-color: white;
 }
 
-body
-  main
-  .display-column
-  .bottom-sec
-  .left-sec
-  .left-sec-top
-  .left-sec-top-top {
+body main .display-column .bottom-sec .left-sec .left-sec-top .left-sec-top-top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-body
-  main
-  .display-column
-  .bottom-sec
-  .left-sec
-  .left-sec-top
-  .left-sec-top-top
-  .sec-icon-and-desc {
+body main .display-column .bottom-sec .left-sec .left-sec-top .left-sec-top-top .sec-icon-and-desc {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: space-evenly;
-  -ms-flex-pack: space-evenly;
-  justify-content: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-body
-  main
-  .display-column
-  .bottom-sec
-  .left-sec
-  .left-sec-top
-  .left-sec-top-top
-  .sec-icon-and-desc
-  .icon-desc {
+body main .display-column .bottom-sec .left-sec .left-sec-top .left-sec-top-top .sec-icon-and-desc .icon-desc {
   margin-left: 1.5rem;
 }
 
-body
-  main
-  .display-column
-  .bottom-sec
-  .left-sec
-  .left-sec-top
-  .left-sec-top-bottom {
+body main .display-column .bottom-sec .left-sec .left-sec-top .left-sec-top-bottom {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-body
-  main
-  .display-column
-  .bottom-sec
-  .left-sec
-  .left-sec-top
-  .left-sec-top-bottom
-  .sec-icon-and-desc {
+body main .display-column .bottom-sec .left-sec .left-sec-top .left-sec-top-bottom .sec-icon-and-desc {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: space-evenly;
-  -ms-flex-pack: space-evenly;
-  justify-content: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-body
-  main
-  .display-column
-  .bottom-sec
-  .left-sec
-  .left-sec-top
-  .left-sec-top-bottom
-  .sec-icon-and-desc
-  .icon-desc {
+body main .display-column .bottom-sec .left-sec .left-sec-top .left-sec-top-bottom .sec-icon-and-desc .icon-desc {
   margin-left: 1.5rem;
 }
 
@@ -294,60 +327,40 @@ body main .display-column .bottom-sec .left-sec .left-sec-bottom {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 0rem 2.2rem;
   -webkit-box-shadow: 3px 3px 30px 20px #e4e6fe;
-  box-shadow: 3px 3px 30px 20px #e4e6fe;
-  background: -webkit-gradient(
-    linear,
-    right top,
-    left top,
-    from(#3a50da),
-    color-stop(75%, #8290e7)
-  );
+          box-shadow: 3px 3px 30px 20px #e4e6fe;
+  background: -webkit-gradient(linear, right top, left top, from(#3a50da), color-stop(75%, #8290e7));
   background: linear-gradient(to left, #3a50da, #8290e7 75%);
   color: white;
 }
 
-body
-  main
-  .display-column
-  .bottom-sec
-  .left-sec
-  .left-sec-bottom
-  .left-sec-bottom-1 {
+@media screen and (min-width: 320px) and (max-width: 425px) {
+  body main .display-column .bottom-sec .left-sec .left-sec-bottom {
+    margin-top: 2rem;
+  }
+}
+
+body main .display-column .bottom-sec .left-sec .left-sec-bottom .left-sec-bottom-1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: space-evenly;
-  -ms-flex-pack: space-evenly;
-  justify-content: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
-body
-  main
-  .display-column
-  .bottom-sec
-  .left-sec
-  .left-sec-bottom
-  .left-sec-bottom-1
-  h2 {
+body main .display-column .bottom-sec .left-sec .left-sec-bottom .left-sec-bottom-1 h2 {
   font-size: 1.8rem;
 }
 
-body
-  main
-  .display-column
-  .bottom-sec
-  .left-sec
-  .left-sec-bottom
-  .left-sec-bottom-1
-  p {
+body main .display-column .bottom-sec .left-sec .left-sec-bottom .left-sec-bottom-1 p {
   font-size: 1.6rem;
 }
 
@@ -359,51 +372,44 @@ body main .display-column .bottom-sec .right-sec {
   background-color: white;
 }
 
+@media screen and (min-width: 320px) and (max-width: 425px) {
+  body main .display-column .bottom-sec .right-sec {
+    width: 100%;
+    margin-top: 2rem;
+    height: 165px;
+  }
+}
+
 body main .display-column .bottom-sec .right-sec .sec-weather-days {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: space-evenly;
-  -ms-flex-pack: space-evenly;
-  justify-content: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   width: 100%;
   height: 12vh;
 }
 
-body
-  main
-  .display-column
-  .bottom-sec
-  .right-sec
-  .sec-weather-days
-  .sec-weather-days-div {
+body main .display-column .bottom-sec .right-sec .sec-weather-days .sec-weather-days-div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: space-evenly;
-  -ms-flex-pack: space-evenly;
-  justify-content: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-body
-  main
-  .display-column
-  .bottom-sec
-  .right-sec
-  .sec-weather-days
-  .sec-weather-days-div
-  .filter-color-icon {
-  -webkit-filter: invert(52%) sepia(27%) saturate(3976%) hue-rotate(193deg)
-    brightness(90%) contrast(101%);
-  filter: invert(52%) sepia(27%) saturate(3976%) hue-rotate(193deg)
-    brightness(90%) contrast(101%);
+body main .display-column .bottom-sec .right-sec .sec-weather-days .sec-weather-days-div .filter-color-icon {
+  -webkit-filter: invert(52%) sepia(27%) saturate(3976%) hue-rotate(193deg) brightness(90%) contrast(101%);
+          filter: invert(52%) sepia(27%) saturate(3976%) hue-rotate(193deg) brightness(90%) contrast(101%);
 }
 
 body main .display-column .bottom-sec .right-sec .sec-weather-days .hr {
@@ -420,12 +426,19 @@ body main .display-column .bottom-sec .right-sec .sec-weather-days .hr {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
-  justify-content: space-around;
+      justify-content: space-around;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 0.5rem 0.5rem;
   border-radius: 0.8rem;
+}
+
+@media screen and (min-width: 320px) and (max-width: 375px) {
+  .input-list {
+    margin-right: 0;
+    width: 90%;
+  }
 }
 
 .input-list input {
